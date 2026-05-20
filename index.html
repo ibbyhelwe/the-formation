@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Formation — 90-Day Marketing Growth Engagement</title>
+    <meta name="description" content="Stop wasting money on marketing that doesn't work. The Formation builds your complete growth engine in 90 days — guaranteed.">
+    <meta property="og:title" content="The Formation — 90-Day Marketing Growth Engagement">
+    <meta property="og:description" content="Stop wasting money on marketing that doesn't work. The Formation builds your complete growth engine in 90 days — guaranteed.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Formation">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Formation — 90-Day Marketing Growth Engagement">
+    <meta name="twitter:description" content="Stop wasting money on marketing that doesn't work. The Formation builds your complete growth engine in 90 days — guaranteed.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* =============================================
+           VARIABLES
+        ============================================= */
+        :root {
+            --charcoal:   #2B2D2F;
+            --cream:      #F5F1E8;
+            --gold:       #D4A574;
+            --forest:     #1C3A30;
+            --slate-blue: #4A5F6D;
+            --signal-red: #C4443C;
+        }
+
+        /* =============================================
+           RESET & BASE
+        ============================================= */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 400;
+            background: var(--charcoal);
+            color: var(--charcoal);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul { list-style: none; }
+
+        /* =============================================
+           LAYOUT
+        ============================================= */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .section {
+            padding: 104px 0;
+        }
+
+        .section-cream    { background: var(--cream);      color: var(--charcoal); }
+        .section-charcoal { background: var(--charcoal);  color: var(--cream);    }
+        .section-slate    { background: var(--charcoal); color: var(--cream);    }
+
+        /* =============================================
+           ANIMATIONS
+        ============================================= */
+        @keyframes heroGlowDrift {
+            0%   { transform: translate(0, 0)        scale(1);    opacity: 1;    }
+            20%  { transform: translate(-4%, 6%)     scale(1.05); opacity: 0.85; }
+            40%  { transform: translate(6%, -3%)     scale(0.97); opacity: 1;    }
+            60%  { transform: translate(-2%, -6%)    scale(1.07); opacity: 0.88; }
+            80%  { transform: translate(5%, 3%)      scale(0.98); opacity: 1;    }
+            100% { transform: translate(0, 0)        scale(1);    opacity: 1;    }
+        }
+
+        .fade-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        transform 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .d1 { transition-delay: 0.1s; }
+        .d2 { transition-delay: 0.2s; }
+        .d3 { transition-delay: 0.3s; }
+        .d4 { transition-delay: 0.4s; }
+        .d5 { transition-delay: 0.5s; }
+
+        /* =============================================
+           TYPOGRAPHY UTILITIES
+        ============================================= */
+        .gold-italic {
+            font-family: 'Inter', sans-serif;
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .section-label {
+            font-family: 'Manrope', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 22px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(30px, 4.5vw, 50px);
+            font-weight: 700;
+            line-height: 1.1;
+            position: relative;
+            display: block;
+            padding-bottom: 22px;
+            margin-bottom: 36px;
+        }
+
+        .section-title.with-underline::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 52px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        /* =============================================
+           NAVIGATION
+        ============================================= */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            transition: background 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        #navbar.scrolled {
+            background: var(--cream);
+            box-shadow: 0 1px 0 rgba(43, 45, 47, 0.1);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            height: 84px;
+        }
+
+        .nav-logo {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--cream);
+            transition: color 0.4s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        #navbar.scrolled .nav-logo { color: var(--charcoal); }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: rgba(245, 241, 232, 0.75);
+            transition: color 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover { color: var(--cream); }
+
+        #navbar.scrolled .nav-links a       { color: rgba(43, 45, 47, 0.65); }
+        #navbar.scrolled .nav-links a:hover { color: var(--charcoal); }
+
+        .nav-cta {
+            font-family: 'Manrope', sans-serif;
+            font-size: 12.5px;
+            font-weight: 600;
+            background: var(--gold);
+            color: var(--charcoal);
+            padding: 9px 18px;
+            border-radius: 2px;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.88;
+            transform: translateY(-1px);
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            width: 36px;
+            height: 36px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            flex-shrink: 0;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--cream);
+            transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+            transform-origin: center;
+        }
+
+        #navbar.scrolled .nav-toggle span { background: var(--charcoal); }
+
+        .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .nav-toggle.open span:nth-child(2) { opacity: 0; }
+        .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+        .nav-mobile {
+            display: none;
+            position: fixed;
+            top: 84px;
+            left: 0;
+            right: 0;
+            background: var(--charcoal);
+            padding: 20px 32px 28px;
+            flex-direction: column;
+            gap: 0;
+            border-top: 1px solid rgba(212, 165, 116, 0.18);
+            z-index: 99;
+        }
+
+        .nav-mobile.open { display: flex; }
+
+        .nav-mobile a {
+            font-family: 'Manrope', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: rgba(245, 241, 232, 0.8);
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(245, 241, 232, 0.08);
+            transition: color 0.2s ease;
+        }
+
+        .nav-mobile a:hover { color: var(--cream); }
+        .nav-mobile a:last-of-type { border-bottom: none; }
+
+        .nav-mobile .nav-cta {
+            margin-top: 20px;
+            text-align: center;
+            padding: 14px;
+            font-size: 14px;
+        }
+
+        /* =============================================
+           BUTTONS
+        ============================================= */
+        .btn {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 14.5px;
+            padding: 15px 28px;
+            display: inline-block;
+            border-radius: 2px;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn:hover {
+            opacity: 0.88;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--charcoal);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--cream);
+            border: 1.5px solid rgba(245, 241, 232, 0.55);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--cream);
+            opacity: 1;
+        }
+
+        .btn-lg {
+            font-size: 16px;
+            font-weight: 700;
+            padding: 18px 40px;
+        }
+
+        /* =============================================
+           CHAPTER CARDS
+        ============================================= */
+        .chapter-card {
+            background: var(--charcoal);
+            padding: 28px 32px;
+            text-align: center;
+            border-top: 1px solid rgba(212, 165, 116, 0.12);
+            border-bottom: 1px solid rgba(212, 165, 116, 0.12);
+        }
+
+        .chapter-card span {
+            font-family: 'Inter', sans-serif;
+            font-style: italic;
+            font-size: 13px;
+            letter-spacing: 0.09em;
+            color: rgba(245, 241, 232, 0.38);
+        }
+
+        /* =============================================
+           NUMBERED INSIGHT BAR
+        ============================================= */
+        .insight-bar {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 18px 22px;
+            border-left: 4px solid var(--signal-red);
+            margin-bottom: 10px;
+        }
+
+        .insight-bar__num {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--signal-red);
+            min-width: 28px;
+            padding-top: 5px;
+            flex-shrink: 0;
+        }
+
+        .insight-bar__body { flex: 1; }
+
+        .insight-bar__title {
+            font-family: 'Inter', sans-serif;
+            font-size: 19px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 6px;
+            color: var(--charcoal);
+        }
+
+        .insight-bar__title--cream { color: var(--cream); }
+
+        .insight-bar__text {
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+            font-size: 22px;
+            line-height: 1.45;
+            color: var(--charcoal);
+        }
+
+        .insight-bar__desc {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.72;
+            color: rgba(43, 45, 47, 0.7);
+            margin-top: 6px;
+        }
+
+        /* =============================================
+           SECTION 1 — HERO
+        ============================================= */
+        #hero {
+            background: var(--charcoal);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 120px 0 80px;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: -20%;
+            right: -8%;
+            width: 58%;
+            height: 88%;
+            background: radial-gradient(ellipse at 55% 35%, rgba(212, 165, 116, 0.08) 0%, transparent 65%);
+            animation: heroGlowDrift 20s ease-in-out infinite;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 880px;
+        }
+
+        .eyebrow {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 28px;
+            display: block;
+        }
+
+        .hero-headline {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(48px, 7.5vw, 88px);
+            font-weight: 800;
+            line-height: 1.04;
+            color: var(--cream);
+            margin-bottom: 28px;
+        }
+
+        .hero-sub {
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(16px, 1.9vw, 20px);
+            font-weight: 500;
+            line-height: 1.7;
+            color: rgba(245, 241, 232, 0.68);
+            max-width: 640px;
+            margin-bottom: 40px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 36px;
+        }
+
+        .proof-bar {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11.5px;
+            font-weight: 500;
+            color: rgba(245, 241, 232, 0.38);
+            letter-spacing: 0.04em;
+        }
+
+        /* =============================================
+           SECTION 2 — WHO THIS IS FOR
+        ============================================= */
+        .intro-paragraph {
+            font-family: 'Manrope', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.8;
+            margin-bottom: 44px;
+            max-width: 720px;
+            color: rgba(43, 45, 47, 0.85);
+        }
+
+        .checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 52px;
+        }
+
+        .not-for-block {
+            border-left: 4px solid var(--signal-red);
+            background: rgba(196, 68, 60, 0.06);
+            padding: 24px 28px;
+            max-width: 640px;
+        }
+
+        .not-for-label {
+            font-family: 'Manrope', sans-serif;
+            font-size: 9.5px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--signal-red);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .not-for-text {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14.5px;
+            line-height: 1.72;
+            color: rgba(43, 45, 47, 0.8);
+        }
+
+        /* =============================================
+           SECTION 3 — THE PROMISE
+        ============================================= */
+        .promise-callout {
+            border: 1px solid var(--gold);
+            background: rgba(212, 165, 116, 0.05);
+            padding: 44px 48px;
+            margin: 44px 0 60px;
+            max-width: 780px;
+        }
+
+        .promise-callout p {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(19px, 2.4vw, 25px);
+            line-height: 1.6;
+            color: var(--cream);
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid rgba(245, 241, 232, 0.12);
+        }
+
+        .stat-item {
+            padding: 40px 36px;
+            border-right: 1px solid rgba(245, 241, 232, 0.12);
+        }
+
+        .stat-item:last-child { border-right: none; }
+
+        .stat-number {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(38px, 5vw, 62px);
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-family: 'Manrope', sans-serif;
+            font-size: 12.5px;
+            font-weight: 500;
+            color: rgba(245, 241, 232, 0.6);
+            line-height: 1.5;
+        }
+
+        /* =============================================
+           SECTION 4 — HOW IT WORKS
+        ============================================= */
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 44px 0 60px;
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid rgba(43, 45, 47, 0.12);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .comparison-col {
+            padding: 40px 36px;
+        }
+
+        .comparison-col--old {
+            background: rgba(43, 45, 47, 0.04);
+            border-right: 1px solid rgba(43, 45, 47, 0.1);
+        }
+
+        .comparison-col--new {
+            background: rgba(212, 165, 116, 0.05);
+        }
+
+        .comparison-header {
+            font-family: 'Manrope', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(43, 45, 47, 0.1);
+        }
+
+        .comparison-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .comparison-col--old li {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            line-height: 1.65;
+            color: rgba(43, 45, 47, 0.4);
+            text-decoration: line-through;
+            text-decoration-color: rgba(43, 45, 47, 0.2);
+        }
+
+        .comparison-col--new li {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            line-height: 1.65;
+            color: var(--charcoal);
+            font-weight: 500;
+        }
+
+        /* =============================================
+           SECTION 5 — WHAT'S INCLUDED
+        ============================================= */
+        .inclusion-core-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 44px 0 0;
+        }
+
+        .inclusion-bonus-section {
+            margin-top: 32px;
+        }
+
+        .inclusion-bonus-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 28px 0 24px;
+            border-top: 1px solid rgba(212, 165, 116, 0.18);
+        }
+
+        .inclusion-bonus-label-text {
+            font-family: 'Manrope', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold);
+            white-space: nowrap;
+        }
+
+        .inclusion-bonus-divider {
+            flex: 1;
+            height: 1px;
+            background: rgba(212, 165, 116, 0.18);
+        }
+
+        .inclusion-bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-bottom: 48px;
+        }
+
+        .inclusion-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(245, 241, 232, 0.09);
+            border-top: 2px solid transparent;
+            padding: 32px 28px;
+            transition: border-top-color 0.32s ease, transform 0.28s ease, background 0.28s ease;
+        }
+
+        .inclusion-card:hover {
+            border-top-color: var(--gold);
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .inclusion-badge {
+            display: inline-block;
+            font-family: 'Manrope', sans-serif;
+            font-size: 8.5px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: rgba(212, 165, 116, 0.1);
+            border: 1px solid rgba(212, 165, 116, 0.28);
+            padding: 3px 8px;
+            border-radius: 2px;
+            margin-bottom: 12px;
+        }
+
+        .inclusion-value {
+            font-family: 'Manrope', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .inclusion-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 21px;
+            font-weight: 700;
+            color: var(--cream);
+            line-height: 1.25;
+            margin-bottom: 14px;
+        }
+
+        .inclusion-desc {
+            font-family: 'Manrope', sans-serif;
+            font-size: 13.5px;
+            font-weight: 400;
+            line-height: 1.72;
+            color: rgba(245, 241, 232, 0.56);
+        }
+
+        .value-summary {
+            border: 1px solid rgba(212, 165, 116, 0.22);
+            padding: 36px 40px;
+            max-width: 460px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .value-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 24px;
+        }
+
+        .value-label {
+            font-family: 'Manrope', sans-serif;
+            font-size: 12.5px;
+            font-weight: 500;
+            color: rgba(245, 241, 232, 0.5);
+            letter-spacing: 0.06em;
+        }
+
+        .value-amount {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(245, 241, 232, 0.5);
+        }
+
+        .value-divider {
+            height: 1px;
+            background: rgba(212, 165, 116, 0.18);
+        }
+
+        .value-row--highlight .value-label {
+            color: var(--cream);
+            font-weight: 600;
+            font-size: 13.5px;
+        }
+
+        .value-row--highlight .value-amount {
+            font-family: 'Inter', sans-serif;
+            font-size: 26px;
+            color: var(--gold);
+        }
+
+        /* =============================================
+           SECTION 6 — PROOF
+        ============================================= */
+        .proof-hero-block {
+            background: var(--charcoal);
+            padding: 64px 48px;
+            text-align: center;
+            margin: 44px 0 40px;
+        }
+
+        .proof-big-number {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(64px, 10vw, 100px);
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+            display: block;
+        }
+
+        .proof-per-month {
+            font-family: 'Manrope', sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--cream);
+            margin: 6px 0 20px;
+            display: block;
+        }
+
+        .proof-hero-desc {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14.5px;
+            line-height: 1.72;
+            color: rgba(245, 241, 232, 0.65);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .testimonial-card {
+            background: var(--cream);
+            border-left: 3px solid var(--gold);
+            padding: 32px 28px;
+            transition: transform 0.28s ease;
+        }
+
+        .testimonial-card:hover { transform: translateY(-3px); }
+
+        .testimonial-quote {
+            font-family: 'Inter', sans-serif;
+            font-style: italic;
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.65;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+        }
+
+        .testimonial-attr {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11.5px;
+            font-weight: 500;
+            color: rgba(43, 45, 47, 0.5);
+            line-height: 1.6;
+        }
+
+        /* VIDEO TESTIMONIALS */
+        .video-testimonials {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin: 0 0 56px;
+        }
+
+        .video-card-meta {
+            margin-bottom: 16px;
+        }
+
+        .video-card-name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            color: var(--charcoal);
+            margin-bottom: 5px;
+        }
+
+        .video-card-result {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .video-card-desc {
+            font-family: 'Manrope', sans-serif;
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: rgba(43, 45, 47, 0.62);
+        }
+
+        .video-embed {
+            position: relative;
+            padding-bottom: 177.78%;
+            overflow: hidden;
+            border-radius: 4px;
+            background: var(--charcoal);
+            margin-top: 16px;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* =============================================
+           SECTION 7 — THE GUARANTEE
+        ============================================= */
+        .guarantee-block {
+            border: 1px solid var(--gold);
+            background: rgba(212, 165, 116, 0.05);
+            padding: 48px;
+            max-width: 700px;
+            margin-top: 44px;
+        }
+
+        .guarantee-title {
+            font-family: 'Manrope', sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .guarantee-body {
+            font-family: 'Manrope', sans-serif;
+            font-size: 15.5px;
+            line-height: 1.78;
+            color: rgba(245, 241, 232, 0.84);
+            margin-bottom: 20px;
+        }
+
+        .guarantee-footnote {
+            font-family: 'Manrope', sans-serif;
+            font-size: 13px;
+            font-style: italic;
+            color: rgba(245, 241, 232, 0.45);
+            line-height: 1.65;
+        }
+
+        /* =============================================
+           SECTION 8 — FAQs
+        ============================================= */
+        .faq-list {
+            margin-top: 44px;
+            border-top: 1px solid rgba(43, 45, 47, 0.1);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(43, 45, 47, 0.1);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 24px 4px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .faq-question-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--charcoal);
+            line-height: 1.35;
+        }
+
+        .faq-icon {
+            font-family: 'Manrope', sans-serif;
+            font-size: 22px;
+            font-weight: 300;
+            color: var(--gold);
+            flex-shrink: 0;
+            width: 24px;
+            text-align: center;
+            line-height: 1;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.44s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        padding 0.44s ease;
+            padding: 0 4px;
+        }
+
+        .faq-answer.open {
+            max-height: 360px;
+            padding: 0 4px 24px;
+        }
+
+        .faq-answer p {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14.5px;
+            line-height: 1.78;
+            color: rgba(43, 45, 47, 0.72);
+        }
+
+        /* =============================================
+           SECTION 9 — SCARCITY & CTA
+        ============================================= */
+        .spot-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .spot {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .spot--taken {
+            background: var(--signal-red);
+            color: #fff;
+            font-family: 'Manrope', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .spot--open {
+            border: 2px solid rgba(245, 241, 232, 0.35);
+        }
+
+        .spot-label {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11.5px;
+            font-weight: 500;
+            color: rgba(245, 241, 232, 0.5);
+            margin-bottom: 32px;
+            display: block;
+        }
+
+        .cta-body {
+            font-family: 'Manrope', sans-serif;
+            font-size: 15.5px;
+            font-weight: 400;
+            line-height: 1.75;
+            color: rgba(245, 241, 232, 0.72);
+            max-width: 520px;
+            margin-bottom: 36px;
+        }
+
+        .cta-micro {
+            font-family: 'Manrope', sans-serif;
+            font-size: 11.5px;
+            font-weight: 400;
+            color: rgba(245, 241, 232, 0.42);
+            margin: 14px 0 28px;
+            display: block;
+        }
+
+        .cta-secondary {
+            font-family: 'Manrope', sans-serif;
+            font-size: 14px;
+            color: rgba(245, 241, 232, 0.55);
+        }
+
+        .cta-secondary strong {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .cta-secondary-wrap {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .btn-instagram {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--cream);
+            border: 1.5px solid rgba(245, 241, 232, 0.35);
+            padding: 9px 16px;
+            border-radius: 2px;
+            transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .btn-instagram:hover {
+            border-color: var(--cream);
+            background: rgba(245, 241, 232, 0.06);
+            transform: translateY(-1px);
+        }
+
+        .btn-instagram svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
+        /* =============================================
+           FOOTER
+        ============================================= */
+        footer {
+            background: var(--charcoal);
+            border-top: 1px solid rgba(212, 165, 116, 0.12);
+        }
+
+        .footer-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+            gap: 24px;
+        }
+
+        .footer-wordmark {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--cream);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            font-family: 'Manrope', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(245, 241, 232, 0.5);
+            transition: color 0.25s ease;
+        }
+
+        .footer-links a:hover { color: var(--cream); }
+
+        .footer-bottom {
+            padding: 18px 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(245, 241, 232, 0.07);
+        }
+
+        .footer-legal {
+            font-family: 'Manrope', sans-serif;
+            font-size: 10.5px;
+            color: rgba(245, 241, 232, 0.28);
+        }
+
+        /* =============================================
+           RESPONSIVE — TABLET
+        ============================================= */
+        @media (max-width: 1000px) {
+            .nav-links, .nav-cta { display: none; }
+            .nav-toggle { display: flex; }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .video-testimonials {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .inclusion-core-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .inclusion-bonus-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-col--old {
+                border-right: none;
+                border-bottom: 1px solid rgba(245, 241, 232, 0.08);
+            }
+        }
+
+        @media (max-width: 680px) {
+            .section { padding: 72px 0; }
+
+            .container { padding: 0 24px; }
+
+            .hero-ctas {
+                flex-direction: column;
+            }
+
+            .hero-ctas .btn { width: 100%; }
+
+            .inclusion-core-grid  { grid-template-columns: 1fr; }
+            .inclusion-bonus-grid { grid-template-columns: 1fr; }
+
+            .stats-row { grid-template-columns: 1fr; }
+
+            .stat-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(245, 241, 232, 0.12);
+                padding: 28px 24px;
+            }
+
+            .stat-item:last-child { border-bottom: none; }
+
+            .promise-callout  { padding: 28px 24px; margin: 36px 0 48px; }
+            .guarantee-block  { padding: 28px 24px; }
+            .value-summary    { padding: 28px 24px; }
+            .comparison-col   { padding: 24px 20px; }
+            .proof-hero-block { padding: 44px 24px; }
+
+            .btn-lg {
+                width: 100%;
+                font-size: 15px;
+                padding: 17px 24px;
+            }
+
+            .footer-main {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 18px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero-headline { font-size: 38px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- =============================================
+     NAVIGATION
+============================================= -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a class="nav-logo" href="#hero">The Formation</a>
+        <ul class="nav-links">
+            <li><a href="#offer">The Offer</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#whats-included">What's Included</a></li>
+            <li><a href="#proof">Proof</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#book">Book a Call</a></li>
+        </ul>
+        <a href="[INSERT CALENDLY LINK]" class="nav-cta">Book Free Audit</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+        <a href="#offer">The Offer</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#whats-included">What's Included</a>
+        <a href="#proof">Proof</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#book">Book a Call</a>
+        <a href="[INSERT CALENDLY LINK]" class="nav-cta">Book Free Audit</a>
+    </div>
+</nav>
+
+
+<!-- =============================================
+     SECTION 1 — HERO
+============================================= -->
+<section id="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-content fade-up">
+
+        <h1 class="hero-headline">
+            Your marketing isn't <em class="gold-italic">broken</em>.<br>Your system is.
+        </h1>
+        <p class="hero-sub">
+            12-week 1:1 coaching for online brands who are tired of spending money on marketing that goes nowhere.
+        </p>
+        <div class="hero-ctas">
+            <a href="[INSERT CALENDLY LINK]" class="btn btn-primary">Book Your Free Audit Call →</a>
+            <a href="#whats-included" class="btn btn-secondary">See What's Included ↓</a>
+        </div>
+        <p class="proof-bar">Founding price $5,000 AUD &nbsp;·&nbsp; 90-day guarantee</p>
+    </div>
+</section>
+
+
+
+
+<!-- =============================================
+     SECTION 2 — WHO THIS IS FOR
+============================================= -->
+<section id="offer" class="section section-cream">
+    <div class="container">
+        <span class="section-label fade-up">01 — Who This Is For</span>
+        <h2 class="section-title with-underline fade-up">
+            You're doing the work.<br>It's still not working.
+        </h2>
+        <p class="intro-paragraph fade-up">
+            You're running an online brand — ecommerce, coaching, digital products, or services — somewhere between $10K and $50K a month. You've been at this long enough to have tried things. Agencies. Courses. Freelancers. And the number on your dashboard stays exactly where it is.
+        </p>
+
+        <div class="checklist">
+            <div class="insight-bar fade-up">
+                <span class="insight-bar__num">01</span>
+                <span class="insight-bar__text">You've hired an agency and couldn't explain what they actually did</span>
+            </div>
+            <div class="insight-bar fade-up d1">
+                <span class="insight-bar__num">02</span>
+                <span class="insight-bar__text">You're running Meta ads but don't know if they're profitable</span>
+            </div>
+            <div class="insight-bar fade-up d1">
+                <span class="insight-bar__num">03</span>
+                <span class="insight-bar__text">Your content gets engagement — almost nobody buys from it</span>
+            </div>
+            <div class="insight-bar fade-up d2">
+                <span class="insight-bar__num">04</span>
+                <span class="insight-bar__text">You've bought courses and still have no working system</span>
+            </div>
+            <div class="insight-bar fade-up d2">
+                <span class="insight-bar__num">05</span>
+                <span class="insight-bar__text">Revenue has been flat for months and you've quietly accepted it</span>
+            </div>
+            <div class="insight-bar fade-up d3">
+                <span class="insight-bar__num">06</span>
+                <span class="insight-bar__text">You rebranded, redesigned, hired help — enquiries didn't change</span>
+            </div>
+            <div class="insight-bar fade-up d3">
+                <span class="insight-bar__num">07</span>
+                <span class="insight-bar__text">Someone told you your messaging is off but couldn't tell you how to fix it</span>
+            </div>
+        </div>
+
+        <div class="not-for-block fade-up">
+            <span class="not-for-label">This is not for you if —</span>
+            <p class="not-for-text">You want someone to run your ads while you stay in the dark. The entire point of The Formation is that you walk away owning your marketing completely.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- =============================================
+     SECTION 3 — THE PROMISE
+============================================= -->
+<section id="promise" class="section section-charcoal">
+    <div class="container">
+        <span class="section-label fade-up">02 — The Promise</span>
+        <h2 class="section-title with-underline fade-up" style="color: var(--cream);">
+            90 days to a marketing system<br>that actually works.
+        </h2>
+
+        <div class="promise-callout fade-up">
+            <p>
+                In 90 days you'll go from <em class="gold-italic">"I don't know why my marketing isn't working"</em> to a clear system, sharp message, profitable ad structure, and organic direction — all integrated, all yours to keep and scale forever.
+            </p>
+        </div>
+
+        <div class="stats-row fade-up">
+            <div class="stat-item">
+                <span class="stat-number">90</span>
+                <span class="stat-label">Days to a working system</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">12</span>
+                <span class="stat-label">Dedicated 1-on-1 calls</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">$0→$50K</span>
+                <span class="stat-label">Per month — proven client result</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- =============================================
+     SECTION 4 — HOW IT WORKS
+============================================= -->
+<section id="how-it-works" class="section section-cream">
+    <div class="container">
+        <span class="section-label fade-up">03 — How It Works</span>
+        <h2 class="section-title with-underline fade-up">
+            The <em class="gold-italic">Unfiltered</em> Engine.
+        </h2>
+        <p class="intro-paragraph fade-up">
+            Most marketing fails for one reason — it's built on tactics before there's a foundation. The Unfiltered Engine flips this. We start with consumer psychology — why your customers actually buy — and build everything else from that foundation outward.
+        </p>
+
+        <div class="process-steps">
+            <div class="insight-bar fade-up" style="background: rgba(196, 68, 60, 0.03);">
+                <span class="insight-bar__num">01</span>
+                <div class="insight-bar__body">
+                    <div class="insight-bar__title">The Full Audit (Week 1)</div>
+                    <p class="insight-bar__desc">We go through everything — ads, messaging, positioning, channels, conversion points. We find the actual problem, not the symptom.</p>
+                </div>
+            </div>
+            <div class="insight-bar fade-up d1" style="background: rgba(196, 68, 60, 0.03);">
+                <span class="insight-bar__num">02</span>
+                <div class="insight-bar__body">
+                    <div class="insight-bar__title">Strategy Build (Week 2)</div>
+                    <p class="insight-bar__desc">Your complete custom strategy — positioning, messaging, paid structure, organic direction — mapped as one integrated system. Built with you, not handed to you.</p>
+                </div>
+            </div>
+            <div class="insight-bar fade-up d2" style="background: rgba(196, 68, 60, 0.03);">
+                <span class="insight-bar__num">03</span>
+                <div class="insight-bar__body">
+                    <div class="insight-bar__title">Implement and Launch (Weeks 3–8)</div>
+                    <p class="insight-bar__desc">I handle the technical setup. You handle execution on your end with my guidance every step of the way. You're never left guessing what to do next.</p>
+                </div>
+            </div>
+            <div class="insight-bar fade-up d3" style="background: rgba(196, 68, 60, 0.03);">
+                <span class="insight-bar__num">04</span>
+                <div class="insight-bar__body">
+                    <div class="insight-bar__title">Optimise and Scale (Weeks 9–12)</div>
+                    <p class="insight-bar__desc">We cut what isn't working and press on what is. Day 90: a running, profitable growth engine you own and understand completely.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-table fade-up">
+            <div class="comparison-col comparison-col--old">
+                <div class="comparison-header">❌ The Old Way</div>
+                <ul>
+                    <li>Tactics first, strategy never</li>
+                    <li>Siloed ads, content, email</li>
+                    <li>Agency owns everything</li>
+                    <li>Optimising for vanity metrics</li>
+                    <li>Guess and check forever</li>
+                    <li>Dependent on retainers indefinitely</li>
+                </ul>
+            </div>
+            <div class="comparison-col comparison-col--new">
+                <div class="comparison-header">✅ The Unfiltered Engine</div>
+                <ul>
+                    <li>Consumer psychology first, always.</li>
+                    <li>One integrated system</li>
+                    <li>You own everything</li>
+                    <li>Optimising for real profit</li>
+                    <li>A system you can diagnose</li>
+                    <li>Fully yours at Day 90</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- =============================================
+     SECTION 5 — WHAT'S INCLUDED
+============================================= -->
+<section id="whats-included" class="section section-charcoal">
+    <div class="container">
+        <span class="section-label fade-up">04 — What's Included</span>
+        <h2 class="section-title with-underline fade-up" style="color: var(--cream);">
+            Everything inside The Formation.
+        </h2>
+
+        <div class="inclusion-core-grid">
+            <div class="inclusion-card fade-up">
+                <span class="inclusion-value">$2,500 value</span>
+                <h3 class="inclusion-title">Unfiltered Engine Strategy Build</h3>
+                <p class="inclusion-desc">A completely custom marketing strategy covering positioning, messaging, paid ads structure, and organic content direction. Built together in Weeks 1–2.</p>
+            </div>
+            <div class="inclusion-card fade-up d1">
+                <span class="inclusion-value">$4,500 value</span>
+                <h3 class="inclusion-title">Hybrid Implementation Support — Full 90 Days</h3>
+                <p class="inclusion-desc">Hands-on support across the full engagement. I handle the technical heavy lifting while coaching you through execution on your end.</p>
+            </div>
+            <div class="inclusion-card fade-up d2">
+                <span class="inclusion-value">$2,400 value</span>
+                <h3 class="inclusion-title">12 Weekly 1-on-1 Coaching Calls</h3>
+                <p class="inclusion-desc">One dedicated call every week — strategy, performance review, troubleshooting, and skill building. You become a sharper marketer with every session.</p>
+            </div>
+        </div>
+
+        <div class="inclusion-bonus-section fade-up">
+            <div class="inclusion-bonus-header">
+                <div class="inclusion-bonus-divider"></div>
+                <span class="inclusion-bonus-label-text">Bonuses Included</span>
+                <div class="inclusion-bonus-divider"></div>
+            </div>
+            <div class="inclusion-bonus-grid">
+                <div class="inclusion-card">
+                    <span class="inclusion-badge">Bonus</span>
+                    <span class="inclusion-value">$500 value</span>
+                    <h3 class="inclusion-title">Messaging &amp; Positioning Framework</h3>
+                    <p class="inclusion-desc">Proprietary fillable framework for nailing brand voice, consumer psychology, and market positioning. Yours to keep forever.</p>
+                </div>
+                <div class="inclusion-card">
+                    <span class="inclusion-badge">Bonus</span>
+                    <span class="inclusion-value">$300 value</span>
+                    <h3 class="inclusion-title">Pre-Built Meta Ads Campaign Structure</h3>
+                    <p class="inclusion-desc">Ready-to-deploy campaign framework. Never start from a blank Ads Manager again.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="value-summary fade-up">
+            <div class="value-row">
+                <span class="value-label">Total value</span>
+                <span class="value-amount">$10,200</span>
+            </div>
+            <div class="value-divider"></div>
+            <div class="value-row value-row--highlight">
+                <span class="value-label">Your investment</span>
+                <span class="value-amount">$5,000</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- =============================================
+     SECTION 6 — PROOF
+============================================= -->
+<section id="proof" class="section section-cream">
+    <div class="container">
+        <span class="section-label fade-up">05 — Proof</span>
+        <h2 class="section-title with-underline fade-up">
+            Results that are real, not polished.
+        </h2>
+
+        <div class="video-testimonials">
+
+            <div class="fade-up">
+                <div class="video-card-meta">
+                    <div class="video-card-name">False 9 Football</div>
+                    <span class="video-card-result">Scaled to $1.3M revenue</span>
+                    <p class="video-card-desc">Approached me at the very start of their business and we worked together on all their marketing channels to grow and scale their ecomm brand.</p>
+                </div>
+                <div class="video-embed">
+                    <iframe src="https://player.vimeo.com/video/1193780262?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="False9-football"></iframe>
+                </div>
+            </div>
+
+            <div class="fade-up d1">
+                <div class="video-card-meta">
+                    <div class="video-card-name">Shareefico</div>
+                    <span class="video-card-result">Rebranded &amp; grew content &amp; podcast</span>
+                    <p class="video-card-desc">Was confused on how to market and grow their content. I coached him and gave a clear direction and strategy for content and business growth.</p>
+                </div>
+                <div class="video-embed">
+                    <iframe src="https://player.vimeo.com/video/1193783137?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Ibraheem-Shareef"></iframe>
+                </div>
+            </div>
+
+            <div class="fade-up d2">
+                <div class="video-card-meta">
+                    <div class="video-card-name">Train with Gaff</div>
+                    <span class="video-card-result">Increased paid ads profit by 4x</span>
+                    <p class="video-card-desc">Helped grow his online fitness coaching business and scaled his paid ads strategy.</p>
+                </div>
+                <div class="video-embed">
+                    <iframe src="https://player.vimeo.com/video/1193780261?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Train-with-gaff"></iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card fade-up">
+                <p class="testimonial-quote">"Before working together I was spending $4K a month on ads and couldn't tell you if they were making money. We rebuilt the whole thing and within six weeks I finally understood what was working and why."</p>
+                <p class="testimonial-attr">— Ecommerce store owner, skincare brand, $22K/month</p>
+            </div>
+            <div class="testimonial-card fade-up d1">
+                <p class="testimonial-quote">"I'd hired two agencies before this. Both gave me reports full of numbers that meant nothing. The difference here was that everything was built together — and by the end I actually owned my marketing for the first time."</p>
+                <p class="testimonial-attr">— Online coach, fitness and performance, $15K/month</p>
+            </div>
+            <div class="testimonial-card fade-up d2">
+                <p class="testimonial-quote">"What clicked was understanding why my customers were buying — the actual psychology. Once that was clear, the messaging almost wrote itself. My ads have never performed like this."</p>
+                <p class="testimonial-attr">— Digital product seller, business education, $18K/month</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- =============================================
+     SECTION 7 — THE GUARANTEE
+============================================= -->
+<section id="guarantee" class="section section-charcoal">
+    <div class="container">
+        <span class="section-label fade-up">06 — The Guarantee</span>
+        <h2 class="section-title with-underline fade-up" style="color: var(--cream);">
+            I put my time where my mouth is.
+        </h2>
+
+        <div class="guarantee-block fade-up">
+            <div class="guarantee-title">The 90-Day Working Guarantee</div>
+            <p class="guarantee-body">
+                If we go through the full 90 days and you don't have a profitable, working marketing system — I keep working with you for free until you do. No asterisks. No fine print. Either it works, or I don't stop.
+            </p>
+            <p class="guarantee-footnote">
+                This exists because the #1 objection I hear is "I've been burned before." So I removed the risk entirely.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- =============================================
+     SECTION 8 — FAQs
+============================================= -->
+<section id="faqs" class="section section-cream">
+    <div class="container">
+        <span class="section-label fade-up">07 — FAQs</span>
+        <h2 class="section-title with-underline fade-up">
+            Straight answers.
+        </h2>
+
+        <div class="faq-list fade-up">
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">I've been burned by an agency before. Why is this different?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Agencies keep you dependent — that's their model. This ends with you owning everything we built. And if it doesn't work, I work with you for free until it does.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">How much of my time does this require?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Roughly 2–3 hours per week. One call plus implementation on your end. Built around a real business, not a course schedule.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">$5,000 is a lot. How do I justify this?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>If your marketing is wasting $1,500 a month in bad ad spend or missed conversions — most clients are losing more — this pays for itself in three months. The question is whether staying where you are costs more.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Will you run my ads for me?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No. I build the structure and guide the execution — you run it. The point is you walk away capable, not dependent.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">What if I don't see results in 90 days?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Then I keep working with you for free until you do. That's the guarantee.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">How quickly will I see results?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Most clients have clarity within the first two weeks from the audit and strategy build alone. Measurable growth typically shows in weeks 4–8 as the system launches.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-question-text">Is this right for my business?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>If you're doing $10K–$50K/month and your marketing feels like guesswork, book the free audit call. I'll tell you honestly whether The Formation makes sense for your situation.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- =============================================
+     SECTION 9 — SCARCITY & CTA
+============================================= -->
+<section id="book" class="section section-slate">
+    <div class="container">
+        <span class="section-label fade-up">08 — Next Step</span>
+        <h2 class="section-title with-underline fade-up" style="color: var(--cream);">
+            If it sounds like a fit — let's talk.
+        </h2>
+
+        <div class="spot-row fade-up">
+            <div class="spot spot--taken">✓</div>
+            <div class="spot spot--taken">✓</div>
+            <div class="spot spot--open"></div>
+            <div class="spot spot--open"></div>
+            <div class="spot spot--open"></div>
+        </div>
+        <span class="spot-label fade-up">2 spots taken this month · 3 remaining · Price increases after 5 case studies</span>
+
+        <p class="cta-body fade-up">
+            Book a free 20-minute audit call. I'll look at your current marketing setup and tell you honestly where the problem is. No pitch until it's clear this makes sense for you.
+        </p>
+
+        <div class="fade-up">
+            <a href="[INSERT CALENDLY LINK]" class="btn btn-primary btn-lg">Book Your Free Audit Call →</a>
+        </div>
+        <span class="cta-micro fade-up">Free · 20 minutes · No obligation · Honest feedback either way</span>
+
+        <div class="cta-secondary-wrap fade-up">
+            <p class="cta-secondary">Or DM the word <strong>ENGINE</strong> on Instagram to get the full details sent to you.</p>
+            <a href="https://www.instagram.com/ibrahim.helwe/" target="_blank" rel="noopener noreferrer" class="btn-instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+                </svg>
+                @ibrahim.helwe
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- =============================================
+     FOOTER
+============================================= -->
+<footer>
+    <div class="footer-main">
+        <span class="footer-wordmark">The Formation</span>
+        <div class="footer-links">
+            <a href="https://www.instagram.com/ibrahim.helwe/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="mailto:ibbyhelwe@gmail.com">ibbyhelwe@gmail.com</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-legal">© 2026 The Formation · Results depend on individual effort and market conditions.</p>
+    </div>
+</footer>
+
+
+<script>
+    /* =============================================
+       STICKY NAV
+    ============================================= */
+    const navbar = document.getElementById('navbar');
+    const hero   = document.getElementById('hero');
+
+    new IntersectionObserver(
+        ([entry]) => navbar.classList.toggle('scrolled', !entry.isIntersecting),
+        { threshold: 0 }
+    ).observe(hero);
+
+
+    /* =============================================
+       MOBILE MENU
+    ============================================= */
+    const navToggle = document.getElementById('navToggle');
+    const navMobile = document.getElementById('navMobile');
+
+    navToggle.addEventListener('click', () => {
+        const open = navToggle.classList.toggle('open');
+        navMobile.classList.toggle('open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    navMobile.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navToggle.classList.remove('open');
+            navMobile.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    });
+
+
+    /* =============================================
+       FADE-UP SCROLL ANIMATIONS
+    ============================================= */
+    const fadeObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    fadeObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -32px 0px' }
+    );
+
+    document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+
+
+    /* =============================================
+       FAQ ACCORDION
+    ============================================= */
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const item   = question.closest('.faq-item');
+            const answer = item.querySelector('.faq-answer');
+            const icon   = question.querySelector('.faq-icon');
+            const isOpen = item.classList.contains('open');
+
+            document.querySelectorAll('.faq-item.open').forEach(openItem => {
+                openItem.classList.remove('open');
+                openItem.querySelector('.faq-answer').classList.remove('open');
+                openItem.querySelector('.faq-icon').textContent = '+';
+            });
+
+            if (!isOpen) {
+                item.classList.add('open');
+                answer.classList.add('open');
+                icon.textContent = '−';
+            }
+        });
+    });
+
+
+    /* =============================================
+       SMOOTH SCROLL (offset for fixed nav)
+    ============================================= */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            const top = target.getBoundingClientRect().top + window.scrollY - 84;
+            window.scrollTo({ top, behavior: 'smooth' });
+        });
+    });
+</script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+</body>
+</html>
