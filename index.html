@@ -861,6 +861,35 @@
             line-height: 1.6;
         }
 
+        /* SCREENSHOT TESTIMONIALS */
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .screenshot-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            border: 1px solid rgba(43, 45, 47, 0.1);
+            transition: transform 0.28s ease;
+        }
+
+        .screenshot-grid img:hover {
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 1000px) {
+            .screenshot-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 680px) {
+            .screenshot-grid { grid-template-columns: 1fr; }
+        }
+
         /* VIDEO TESTIMONIALS */
         .video-testimonials {
             display: grid;
@@ -1586,20 +1615,13 @@
 
         </div>
 
-        <div class="testimonials-grid">
-            <div class="testimonial-card fade-up">
-                <p class="testimonial-quote">"Before working together I was spending $4K a month on ads and couldn't tell you if they were making money. We rebuilt the whole thing and within six weeks I finally understood what was working and why."</p>
-                <p class="testimonial-attr">— Ecommerce store owner, skincare brand, $22K/month</p>
-            </div>
-            <div class="testimonial-card fade-up d1">
-                <p class="testimonial-quote">"I'd hired two agencies before this. Both gave me reports full of numbers that meant nothing. The difference here was that everything was built together — and by the end I actually owned my marketing for the first time."</p>
-                <p class="testimonial-attr">— Online coach, fitness and performance, $15K/month</p>
-            </div>
-            <div class="testimonial-card fade-up d2">
-                <p class="testimonial-quote">"What clicked was understanding why my customers were buying — the actual psychology. Once that was clear, the messaging almost wrote itself. My ads have never performed like this."</p>
-                <p class="testimonial-attr">— Digital product seller, business education, $18K/month</p>
-            </div>
+        <div class="screenshot-grid fade-up">
+            <img src="f9f-message1.jpg" alt="Client testimonial screenshot" loading="lazy">
+            <img src="f9f-message2.PNG" alt="Client testimonial screenshot" loading="lazy">
+            <img src="doug-lightbody-message.jpg" alt="Client testimonial screenshot" loading="lazy">
+            <img src="nadia-halalneasy-message.PNG" alt="Client testimonial screenshot" loading="lazy">
         </div>
+
     </div>
 </section>
 
